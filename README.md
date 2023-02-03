@@ -51,8 +51,8 @@ Example:
 ```bash
 export AWS_S3_ENDPOINT="http://127.0.0.1:9000"
 export AWS_REGION=" "
-export AWS_SECRET_ACCESS_KEY="myaccesskey12345"
-export AWS_ACCESS_KEY_ID="hunter123"
+export AWS_ACCESS_KEY_ID="myaccesskey12345"
+export AWS_SECRET_ACCESS_KEY="hunter123"
 ```
 ## Terraform Backend Configuration
 * `bucket` - the name of the bucket you created above

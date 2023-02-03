@@ -12,13 +12,19 @@ podman volume create minio
 
 Run minio server
 ```bash
-podman run -dt -p 9000:9000 -p 9999:9090 -v minio:/data -e "MINIO_ROOT_USER=<admin_user>" -e "MINIO_ROOT_PASSWORD=<admin_password" quay.io/minio/minio server /data --console-address ":9090"
+podman run -dt -p 9000:9000 -p 9999:9090 -v minio:/data \
+    -e "MINIO_ROOT_USER=<admin_user>" \
+    -e "MINIO_ROOT_PASSWORD=<admin_password" \
+    quay.io/minio/minio server /data --console-address ":9090"
 ```
 
 ### Docker
 Run minio server
 ```bash
-docker run -dt -p 9000:9000 -p 9999:9090 -v $(pwd):/data -e "MINIO_ROOT_USER=<admin_user>" -e "MINIO_ROOT_PASSWORD=<admin_password" quay.io/minio/minio server /data --console-address ":9090"
+docker run -dt -p 9000:9000 -p 9999:9090 -v $(pwd):/data \
+    -e "MINIO_ROOT_USER=<admin_user>" \
+    -e "MINIO_ROOT_PASSWORD=<admin_password" \
+    quay.io/minio/minio server /data --console-address ":9090"
 ```
 
 Access the Minio console at: `http://127.0.0.1:9999` and API at: `http://127.0.0.1:9000`
